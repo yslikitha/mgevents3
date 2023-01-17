@@ -1,0 +1,276 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    background-image: url(pexels-francesco-ungaro-206066.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.teamcontainer{
+  position: absolute;
+  background-color: white;
+  top: 10vh;
+  height: 60vh;
+  width: 60vw;
+}
+.ourteam{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+.leftalign{
+    right: 39.5vw;
+}
+.rightalign{
+    left: 39vw;
+}
+.modal{
+    position: absolute;
+    background-color: black;
+    width: 60vw;
+    height: 84vh;
+    z-index: 1;
+    border-radius: 10px;
+}
+.modal button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+button i{
+    cursor: pointer;
+}
+
+body{
+  display: grid;
+  place-items: center;
+}
+.slider{
+  height: 28vh;
+  margin: auto;
+  position: relative;
+  width: 60vw;
+  display: grid;
+  place-items: center ;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.slide{
+  height: 28vh;
+  width: 21vh;
+  margin: 0vh 4vh;
+  display: flex;
+  align-items: center;
+  perspective: 100px ;
+}
+
+img{
+  height: 28vh;
+  width: 21vh;
+}
+
+.slider::before,
+.slider::after{
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,
+  rgba(255,255,255,0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.slider::before{
+  left: 0;
+  top: 0;
+}
+.slider::after{
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg); 
+}
+.card:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  content: "Yeah!";
+  transform:translateY(-100%);
+  font-size: 25px;
+  color:#fff;
+ display: block;
+  background-color: rgba(188, 143, 143, 0.137);
+  z-index: 1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ font-family: sans-serif;
+  transition: transform .4s ease-in;
+  border:4px solid white;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card:after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  content: "Yeah!";
+  transform:translateY(100%);
+  font-size: 25px;
+  color:#fff;
+ display: block;
+  background-color: rgba(188, 143, 143, 0.137);
+  z-index: 1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ font-family: sans-serif;
+  transition: transform .4s ease-in;
+  border:4px solid rgb(255, 255, 255);
+  justify-content: center;
+  box-sizing: border-box;
+}
+.card:hover::before{
+transform: translateY(0%); 
+
+}
+.card:hover::after{
+  transform: translateY(0%); 
+}
+
+.slide-track{
+  display: flex;
+}
+.slide-trackct{
+  animation: scrollct 15s linear infinite;
+}
+
+@keyframes scrollct{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-29vh*6));
+  }
+}
+.slide-trackcb{
+  animation: scrollcb 15s linear infinite;
+}
+
+@keyframes scrollcb{
+  0%{
+    transform: translateX(calc(-29vh*6));
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+.slide-trackct{
+  animation: scrollct 15s linear infinite;
+}
+
+@keyframes scrollct{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-29vh*6));
+  }
+}
+.slide-trackcb{
+  animation: scrollcb 15s linear infinite;
+}
+
+@keyframes scrollcb{
+  0%{
+    transform: translateX(calc(-29vh*6));
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+.slide-trackwt{
+  animation: scrollwt 15s linear infinite;
+}
+
+@keyframes scrollwt{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-29vh*5));
+  }
+}
+.slide-trackwb{
+  animation: scrollwb 15s linear infinite;
+}
+
+@keyframes scrollwb{
+  0%{
+    transform: translateX(calc(-29vh*5));
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+.designm{
+  background-image: url(pexels-abhinav-sharma-11948442.jpg);
+  background-size: cover;
+}
+.slider::before,
+.slider::after{
+  width: 0%;
+}
+.disabledt{
+  display: none;
+}
+.visibledt{
+  margin: 0 6vh;
+}
+@media(max-width : 1300px){
+  .visibledt{
+    margin: 0 4vh;
+  }
+ .slider::before,
+ .slider::after{
+  width: 15%;
+}
+  .disabledt{
+    display: block;
+  }
+  .slide-trackdt{
+    animation: scrolldt 15s linear infinite;
+  }
+  
+  @keyframes scrolldt{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(calc(-29vh*3));
+    }
+  }
+  .slide-trackdb{
+    animation: scrolldb 15s linear infinite;
+  }
+  
+  @keyframes scrolldb{
+    0%{
+      transform: translateX(calc(-29vh*3));
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+}
